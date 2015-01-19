@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sv start mysql || exit 1
+
+exec 2>&1
+exec icinga2 daemon
